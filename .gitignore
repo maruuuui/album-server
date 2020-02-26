@@ -1,0 +1,13 @@
+# local env files
+.env
+.env.local
+.env.*.local
+db.sqlite3
+media/
+
+# Editor directories and files
+.vscode
+
+# cache
+.mypy_cache/
+__pycache__/
