@@ -7,18 +7,25 @@ import uuid
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('album', '0001_initial'),
+        ("album", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='image',
-            name='id',
-            field=models.UUIDField(default=uuid.uuid4, editable=False, help_text='主キー', primary_key=True, serialize=False, verbose_name='主キー'),
+            model_name="image",
+            name="id",
+            field=models.UUIDField(
+                default=uuid.uuid4,
+                editable=False,
+                help_text="主キー",
+                primary_key=True,
+                serialize=False,
+                verbose_name="主キー",
+            ),
         ),
         migrations.AlterField(
-            model_name='image',
-            name='memo',
+            model_name="image",
+            name="memo",
             field=models.CharField(blank=True, max_length=255, null=True),
         ),
     ]

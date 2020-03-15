@@ -7,18 +7,26 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Image',
+            name="Image",
             fields=[
-                ('id', models.UUIDField(editable=False, help_text='主キー', primary_key=True, serialize=False, verbose_name='主キー')),
-                ('image', models.ImageField(upload_to='')),
-                ('memo', models.CharField(max_length=255)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
+                (
+                    "id",
+                    models.UUIDField(
+                        editable=False,
+                        help_text="主キー",
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="主キー",
+                    ),
+                ),
+                ("image", models.ImageField(upload_to="")),
+                ("memo", models.CharField(max_length=255)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
             ],
         ),
     ]
