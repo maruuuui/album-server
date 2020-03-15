@@ -28,7 +28,7 @@ SECRET_KEY = "!dnjhp#@@#jp*x-(1zzwedy8ga1+()wfdp-ab$5(hi4j82qgbb"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -198,7 +198,10 @@ MIDDLEWARE.insert(
     MIDDLEWARE.index("django.middleware.common.CommonMiddleware"),
     "corsheaders.middleware.CorsMiddleware",
 )
-CORS_ORIGIN_WHITELIST = env.list("DJANGO_CORS_ORIGIN_WHITELIST", default=[])
+CORS_ORIGIN_WHITELIST = [] + env.list("DJANGO_CORS_ORIGIN_WHITELIST", default=[])
+
+CORS_ALLOW_CREDENTIALS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Django REST framework
 THIRD_PARTY_APPS += ["rest_framework"]

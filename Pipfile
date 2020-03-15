@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
+black = "*"
 
 [packages]
 django = "*"
@@ -15,3 +16,10 @@ pillow = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
+
+[scripts]
+dockerrun = "bash -c 'docker build . -t album-server-image && docker run -d -p 8000:8000 album-server-image'"
+dockerpush = "bash -c 'docker tag album-server-image skymttk/album-server-image && docker push skymttk/album-server-image'"
