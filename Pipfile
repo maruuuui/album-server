@@ -13,6 +13,10 @@ django-environ = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
 pillow = "*"
+django-storages = "*"
+boto3 = "*"
+pymysql = "*"
+mysqlclient = "*"
 
 [requires]
 python_version = "3.7"
